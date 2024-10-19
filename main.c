@@ -1,37 +1,17 @@
 #include <stdio.h> //osnovna biblioteka
 #include <math.h>
-// double // decimalni
-// long // decimalni
-// float // 
-// char // definisanje karaktera 
-// %d oznacava integer
-// \n- new line je da ubaci u novi red
-// int main() //glavni deo u kojem se svi procesi izvrsavaju
-// {
-//     // int a; // int - integer,koristi se za celobrojne vrednosti
-//     // int b;
-//     double a;
-//      double rez-sqrt;
-//       double rez-log ; 
-//       double rez-log10 ;
-//     rez-sqrt = sqrt(a)
-//     rez-log= log(a)
-//     // printf("Unesi broj a: "); // stampanje
-//     scanf("%d", &a); // skener,
-//      printf("Unesi broj b: ");
-//     scanf("%d", &b); // skener,
-//     rezultat = a+ b;
-//     printf("Zbir broja a i b je: %d\n", rezultat);
-//     return 0;
-// }
 
-//  double a;
-//     double rez_sqrt;
-//     double rez_log ; 
-//     double rez_log10;
-//     rez_sqrt = sqrt(a);
-//     rez_log = log(a);
-//     rez_log10=log10(a);
-//     printf("sqrt(%.2lf) = %.2lf\nlog(%.2lf) = %.2lf\nlog10(%.2lf) = %.2lf\n", a, rez_sqrt, a, rez_log, a, rez_log10);
-   
-//     return 0;
+int main() { 
+    int a;
+    int b;
+    int Pk;
+    int Pp;
+    printf("Unesite velicinu stranice A: " );
+    scanf("%d", &a);//scanf sluzi za citanja znakova sa tastature,"%d" znaci ceo broj,&a-smesti u a varijablu(ovo mu dodje kao neki input za a varijablu)
+    printf("Unesite velicinu stranice B: ");
+    scanf("%d", &b);
+    Pp= a*b;
+    Pk=a*b;
+    printf("Povrsina pravougaonika je: %d\n",Pp);
+    return 0;//ovo se korsiti kao normalna return sintaksa
+}
