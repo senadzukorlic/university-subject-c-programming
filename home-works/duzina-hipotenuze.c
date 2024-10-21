@@ -7,7 +7,6 @@ int main (){
     int b;
     int korenA;
     int korenB;
-    int stepenovanRez;
     int rez;
 
 printf("Unesite duzinu katete A: ");
@@ -16,8 +15,8 @@ korenA = a*a;
 printf("Unesite duzinu katete B: ");
 scanf("%d",&b);
 korenB = b*b;
-stepenovanRez = korenA + korenB;
-rez = sqrt(stepenovanRez);
+
+rez = sqrt( korenA + korenB);
 
 printf("Duzina hipotenuze je: %d\n",rez);
 return 0;
