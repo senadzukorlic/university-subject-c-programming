@@ -1,4 +1,3 @@
-//Implementirati funkciju koja računa povrsinu pravouglog trougla, a nakon toga izračunaj koren tog broja, kao I log od tog broja I log10 od tog broja.
 
 #include <stdio.h>
 #include <math.h>

@@ -1,4 +1,4 @@
-// napravi funkciju koja racuna duzinu hipotenuze kod pravouglog trougla
+
 #include <stdio.h>
 #include <math.h>
 
