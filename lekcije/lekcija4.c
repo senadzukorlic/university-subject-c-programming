@@ -4,12 +4,6 @@
 //4. unesi broj i proveri da li je deljiv sa 3 i sa 5 koristeci if/else
 //5. napisi program koji izracunava stepen broja koristeci for petlju 
 
-//6. napisi program koji racuna faktorijel brojal koristeci for petlju
-//7. napisi program koji proverava da li je broj prost koristeci for petlju
-//8  napisi program koji racuna najveci zajednicki delilac dva broja koristeci euklidov algoritam
-//9. napisi program koji unosi n brojeva jedan po jedan (bez niza),racuna njihov zbir i prosecnu vrednost koristeci petlju
-//10. napisi broj koji ispisuje broj obrnuto npr 123 -> 321
-
 #include <stdio.h>
 #include <math.h>
 
