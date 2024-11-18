@@ -35,10 +35,15 @@ void zadatak2 (){
 
 void zadatak3 (){
     int a;
+    int zbir;
+
+    
+   printf("Unesite broj: ");
+   scanf("%d",&a);
 
     while(a){
-    
-
+    zbir+=a%10;
+    a=a/10;
     }
 }
 
@@ -70,10 +75,10 @@ void zadatak5 (){
 }
 
 int main(){
-    zadatak1();
-    zadatak2();
-    // zadatak3()
-    zadatak4();
-    zadatak5();
+    // zadatak1();
+    // zadatak2();
+    zadatak3();
+    // zadatak4();
+    // zadatak5();
     return 0;
 }

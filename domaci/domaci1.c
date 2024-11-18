@@ -32,6 +32,7 @@ void zadatak7 (){
             boolean = 0;
             break;
         }
+      
     }
 
     if(boolean){
@@ -41,8 +42,41 @@ void zadatak7 (){
     }
 }
 
+void zadata8 (){
+    int a;
+    int b;
+    float r;
+
+  printf("Unesite broj a: ");
+    scanf("%d",&a);
+  printf("Unesite broj b: ");
+    scanf("%d",&b);
+
+    if(a%b!=0){
+    r=a%b;
+    }
+    else{
+    r=b;
+    }
+    printf("Najveci zajednicki delilac je %f",r);
+
+}
+
+void zadatak9 (){
+    int a;
+    int u=0;
+  
+
+    while(a!=0){
+       u=u+10+a%10;
+       a=a/10;
+    }
+
+}
+
 int main(){
     // zadatak6();
     zadatak7();
+    // zadata8();
     return 0;
 }
