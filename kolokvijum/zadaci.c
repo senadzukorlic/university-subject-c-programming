@@ -1,6 +1,6 @@
 //Zadaci osnovni
-#include <math.h>
-#include <stdio.h>
+// #include <math.h>
+// #include <stdio.h>
 // 1. Provera parnosti​
 // Napiši program koji proverava da li je uneseni broj paran ili neparan koristeći if-else naredbu. ​
 
@@ -26,74 +26,248 @@
 
 
 
-int main(){
+// int main(){
 
-return 0;
-}
+// return 0;
+// }
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //Zadaci srednji​
-#include <math.h>
-#include <stdio.h>
+// #include <math.h>
+// #include <stdio.h>
 // 1. Faktorijel broja​
 // Napiši program koji računa faktorijel broja koristeći for petlju.​
 
+// void Faktorijel(){
+//     int a;
+//     int rez = 1;
 
+//     printf("Unesite broj ");
+//     scanf("%d",&a);
+
+//     for(int i=a;i>=1;i--){
+//         rez*=i;
+//     }
+//      printf("Faktorijel broja %d je %d\n",a,rez);
+// }
 
 // 2. Prost broj​
 // Napiši program koji proverava da li je broj prost koristeći for petlju i if-else uslov.​
 
+// void ProstBroj (){
+//     int a;
+//     int boolean = 1;
 
+//     printf("Unesite broj ");
+//     scanf("%d",&a);
+
+//     for(int i=2;i<a;i++){
+//         if(a%i==0){
+//             boolean = 0;
+//             break;
+//         }
+//     }
+
+//     if(boolean){
+//         printf("Uneti broj je prost");
+//     }else{
+//          printf("Uneti broj nije prost");
+//     }
+// }
 
 // 3. Najmanji zajednički delilac (NZD)​
 // Napiši program koji računa NZD dva uneta broja koristeći Euklidov algoritam.​
 
+// void NZD (){
+//     int a,b;
+//     printf("Unesite brojeve ");
+//     scanf("%d %d",&a,&b);
 
+//     while (b!=0)
+//     {
+//         int temp = b;
+//         b = a%b;
+//         a = temp;
+//     }
+//     printf("Najveci zajednicki delilac je %d\n",a);
+// }
 
 // 4. Sumiranje n brojeva​
 // Napiši program koji unosi n brojeva jedan po jedan (bez niza), računa njihov zbir i prosečnu vrednost koristeći petlju.​
 
+// void SumiranjeBr(){
+//     int a;
+//     int b;
+//     int rez =0;
+//     float prosek;
+//     printf("Unesite broj ponavljanja");
+//     scanf("%d",&a);
 
+//     for(int i=1;i<=a;i++){
+//         printf("Uneli ste broj ");
+//         scanf("%d",&b);
+//         rez+=b;
+//     }
+//     prosek = rez/a;
+
+//     printf("Zbir unetih brojeva je %d a prosek je %f",rez,prosek);
+// }
 
 // 5. Broj obrnuto​
 // Napiši program koji ispisuje broj obrnuto (npr. za 12345, izlaz bi bio 54321).​
 
+// void IspisiObrnuto (){
+//     int a,b=0;
+
+//     printf("unesi broj");
+//     scanf("%d", &a);             
+
+//     while(a!=0){
+//     int temp = a % 10;
+//     b = b * 10 + temp;
+//     a = a / 10;
+//     }
+//     printf("Obrnuti broj je %d", b);
+
+// }
 
 
-int main(){
-
-return 0;
-}
+// int main(){
+// Faktorijel();
+// ProstBroj();
+// NZD();
+// SumiranjeBr();
+// IspisiObrnuto();
+// return 0;
+// }
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //Zadaci napredni
 #include <math.h>
 #include <stdio.h>
+#include <string.h>
+
 // 1. Suma cifara broja​
 // Napiši program koja računa zbir svih cifara broja.​
 
+// void zbirCifara(){
+// int a,zbir = 0;
 
+// printf("Unesite broj ");
+// scanf("%d",&a);
+
+// while(a!=0){
+//     zbir+=a%10; 
+//     a/=10;        
+// }
+
+// printf("Zbir cifara broja %d je %d",a,zbir);
+// }
 
 // 2. Niz Fibonacci brojeva​
 // Napiši program koji ispisuje prvih n članova Fibonacci niza bez korišćenja nizova, koristeći samo promenljive i petlju.​
 
+void fibonacci (){
+    int a=0,b=1;
+    int fb;
+    int n;
 
+    printf("Unesite broj clanova Fibonacci niza ");
+    scanf("%d",&n);
+
+     for(int i=1; i<=n;i++){      
+        printf("%d ",a);
+      fb= a+b;
+      a=b;
+      b=fb;          
+     }
+}
 
 // 3. Savršen broj​
 // Napiši program koji proverava da li je broj savršen (broj je savršen ako je jednak zbiru svojih delilaca osim samog sebe, npr. 6 = 1 + 2 + 3).​
 
+void savrsenBroj(){
+    int a,zbirDelilaca = 0;
 
+printf("Unesite broj ");
+scanf("%d",&a);
 
-// 3. Najveći zajednički sadržalac (NZS)​
+for(int i=1;i<a;i++){
+    if(a%i==0){
+        zbirDelilaca+=i;
+    }
+}
+
+if(a == zbirDelilaca){
+    printf("Broj %d je savrsen",a);
+}else{
+        printf("Broj %d nije savrsen",a);
+
+}
+}
+
+// 4. Najveći zajednički sadržalac (NZS)​
 // Napiši program koji pronalazi najmanji zajednički sadržalac dva broja koristeći matematičke operacije.​
 
+void sadrzalac(){
+    int a,b;
+    int nzs=0;
+
+printf("Unesite brojeve ");
+scanf("%d %d",&a,&b);
+
+    for(int i=1;i<=a*b;i++){
+        if(i%a==0 && i%b==0){
+            nzs=i;
+            break;
+        }
+    }
+
+    printf("Najveci zajednicki sadrzalac je %d",nzs);
+}
 
 
-// 4. Kalkulator sa izborom operacije​
+// 5. Kalkulator sa izborom operacije​
 // Napiši program koji radi kao jednostavan kalkulator za operacije sabiranja, oduzimanja, množenja i deljenja, koristeći switch za izbor operacije.
 
+void kalkulator (){
 
+    double a,b,rez;
+    char operacija;
+
+    printf("Unesite prvi broj ");
+    scanf("%lf",&a);
+
+     printf("Unesite drugi broj ");
+    scanf("%lf",&b);
+
+    getchar();
+    
+    printf("Izaberite operaciju (+,-,*,/)");
+    scanf("%c",&operacija);
+
+    switch(operacija){
+        case '+':
+        rez=a+b;
+        printf("Rezultat sabiranja je %.2lf\n",rez);
+        break;
+        case '-':
+        rez=a-b;
+        printf("Rezultat oduzimanja je %.2lf\n",rez);
+        break;case '*':
+        rez=a*b;
+        printf("Rezultat mnozenja je %.2lf\n",rez);
+        break;case '/':
+        rez=a/b;
+        printf("Rezultat deljenja je %.2lf\n",rez);
+        break;
+    }
+}
 
 int main(){
-
+// zbirCifara();
+// fibonacci();
+// savrsenBroj();
+// sadrzalac();
+kalkulator();
 return 0;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////
