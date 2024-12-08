@@ -70,9 +70,9 @@ int main() {
     }else{
         printf("Nema parnih elemenata.\n");
     }
-    // printf("Koliko brojeva zelite da unesete (1 - 10): ");
-    // scanf("%d", &n);
-    // unos_niza(niz, n);
+    printf("Koliko brojeva zelite da unesete (1 - 10): ");
+    scanf("%d", &n);
+    unos_niza(niz, n);
     // double srv;
     // srv = srv_neparnih(niz, n);
     // prikaz_niza(niz, n);

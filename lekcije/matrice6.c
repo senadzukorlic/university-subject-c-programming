@@ -62,12 +62,12 @@ int max_element_matrice(int mat[20][20], int n){
     max = mat[0][0];
     for(i = 0; i < n; i++){
         for(j = 0; j < n; j++){
-            if(max < mat[i][j]){
+            if(max < mat[i][j]){//ako je max manji od trenutnog clana matrice(a proverice se svaki clan,zato sto se iterira kroz svaki clan matrice),onda je taj clan najveci,pa ga dodeljujemo max-u
                 max = mat[i][j];
             }
         }
     }
-    return max;
+    return max; //inace je max najveci,pa cemo samo njega koristiti
 }
 
 int min_element_matrice(int mat[20][20], int n){
@@ -87,9 +87,9 @@ void zamena_prvog_poslednjeg_reda(int mat[20][20], int n){
     int i, j, pom;
     i = 0;
     for(j = 0; j < n; j++){
-        pom = mat[i][j];
-        mat[i][j] = mat[n - 1][j];
-        mat[n-1][j] = pom;
+        pom = mat[i][j];//pom je prvi red
+        mat[i][j] = mat[n - 1][j]; //prvi red ce postati poslednji
+        mat[n-1][j] = pom; //poslednji red ce postati pom,a prethodno smo rekli da je pom prvi
     }
 }
 
