@@ -57,19 +57,19 @@
 // int *p = &a;
 // //printf("%d\n", *p); // Dereferenciranje pokazivaca, ispisuje 10
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int a = 10;
-    int *p;       // Deklaracija pokazivaca
-    p = &a;       // Pokazivac cuva adresu promenljive a
+// int main() {
+//     int a = 10;
+//     int *p;       // Deklaracija pokazivaca
+//     p = &a;       // Pokazivac cuva adresu promenljive a
 
-    printf("Vrednost a: %d\n", a);
-    printf("Adresa a: %p\n", (void*)&a);//%p-specofikator za ispis memoriske vrednosti,void je moranje navesti jer memoriska vrednost to ocekuje 
-    printf("Pokazivac p pokazuje na vrednost: %d\n", *p); // Dereferenciranje
+//     printf("Vrednost a: %d\n", a);
+//     printf("Adresa a: %p\n", (void*)&a);//%p-specofikator za ispis memoriske vrednosti,void je moranje navesti jer memoriska vrednost to ocekuje 
+//     printf("Pokazivac p pokazuje na vrednost: %d\n", *p); // Dereferenciranje
 
-    return 0;
-}
+//     return 0;
+// }
 
 // #include <stdio.h>
 
@@ -90,16 +90,16 @@ int main() {
 
 
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// void promeniVrednost(int *p) {
-//     *p = 42; // Menja vrednost na adresi pokazivaca
-// }
+void promeniVrednost(int *p) {
+    *p = 42; // Menja vrednost na adresi pokazivaca
+}
 
-// int main() {
-//     int broj = 10;
-//     printf("Pre: %d\n", broj);
-//     // promeniVrednost(&broj);
-//     // printf("Posle: %d\n", broj);
-//     return 0;
-// }
+int main() {
+    int broj = 10;
+    printf("Pre: %d\n", broj);
+    promeniVrednost(&broj);
+    printf("Posle: %d\n", broj);
+    return 0;
+}

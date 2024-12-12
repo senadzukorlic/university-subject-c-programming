@@ -50,10 +50,8 @@ double srv_neparnih( int niz[], int n){
 int najveci_parni_element(int niz[], int n){
     int max = -1;
     for(int i = 0; i < n; i++){
-        if(niz[i] % 2 == 0){
-            if(niz[i] > max){
-                max = niz[i];
-            }
+       if (niz[i] % 2 == 0 && niz[i] > max) {
+            max = niz[i];
         }
     }
     return max;
