@@ -26,7 +26,7 @@ int main() {
     printf("Prikaz matrice pre transponovanja:\n");
     for (int i = 0; i < kolone; i++) {
         for (int j = 0; j < redovi; j++) {
-            // printf("%d ", transponovana[i][j]);
+            printf("%d ", matrica[i][j]);
         }
         printf("\n");
     }
