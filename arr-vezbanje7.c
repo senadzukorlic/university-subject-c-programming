@@ -1,16 +1,20 @@
 #include <stdio.h>
 
-int pronadjiMaksimalni(int *niz, int velicina) {
+int pronadjiMaksimalni(int *niz, int velicina)
+{
     int maks = *niz;
-    for (int i = 1; i < velicina; i++) {
-        if (*(niz + i) > maks) {
+    for (int i = 1; i < velicina; i++)
+    {
+        if (*(niz + i) > maks)
+        {
             maks = *(niz + i);
         }
     }
     return maks;
 }
 
-int main() {
+int main()
+{
     int velicina;
 
     printf("Unesite velicinu niza: ");
@@ -18,7 +22,8 @@ int main() {
 
     int niz[velicina];
     printf("Unesite elemente niza: ");
-    for (int i = 0; i < velicina; i++) {
+    for (int i = 0; i < velicina; i++)
+    {
         scanf("%d", &niz[i]);
     }
 
