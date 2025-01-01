@@ -98,20 +98,31 @@ void paranBroj(int niz[], int duzina)
 }
 
 // Funkcija koja nalazi najmanji parni broj u nizu
-int min_parni_broj(int *niz, int velicina)
+void najmanjiParniBroj(int niz[], int duzina)
 {
-    int min = INT_MAX;
-    int postoji = 0;
+    int i;
 
-    for (int i = 0; i < velicina; i++)
+    int parni[duzina];
+    int j = 0;
+
+    for (i = 0; i < duzina; i++)
     {
-        if (niz[i] % 2 == 0 && niz[i] < min)
+        if (niz[i] % 2 == 0)
         {
-            min = niz[i];
-            postoji = 1;
+            parni[j] = niz[i];
+            j++;
         }
     }
-    return (postoji ? min : -1); // Vraća -1 ako nema parnog broja
+
+    int najmanji = parni[0];
+    for (i = 0; i < j; i++)
+    {
+        if (parni[i] < najmanji)
+        {
+            najmanji = parni[i];
+        }
+    }
+    printf("Najmanji paran broj je: %d", najmanji);
 }
 
 // Meni za korisnika
