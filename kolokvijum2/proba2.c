@@ -97,17 +97,46 @@ int odvojElemente(int *matrica, int *velicina)
     }
 
     int j = 0;
+
+    // Dodavanje elemenata iz kolona1
     for (i = 0; i < *velicina; i++)
     {
-        if (kolona1[i] != kolona2[i])
+        int duplikat = 0;
+        for (int k = 0; k < j; k++)
+        {
+            if (unijaKolona[k] == kolona1[i])
+            {
+                duplikat = 1;
+                break;
+            }
+        }
+        if (!duplikat)
         {
             unijaKolona[j] = kolona1[i];
             j++;
+        }
+    }
+
+    // Dodavanje elemenata iz kolona2
+    for (i = 0; i < *velicina; i++)
+    {
+        int duplikat = 0;
+        for (int k = 0; k < j; k++)
+        {
+            if (unijaKolona[k] == kolona2[i])
+            {
+                duplikat = 1;
+                break;
+            }
+        }
+        if (!duplikat)
+        {
             unijaKolona[j] = kolona2[i];
             j++;
         }
     }
 
+    // Ispis rezultata
     for (i = 0; i < j; i++)
     {
         printf("%d ", unijaKolona[i]);
