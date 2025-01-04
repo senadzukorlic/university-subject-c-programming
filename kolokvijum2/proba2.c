@@ -73,10 +73,11 @@ int palindormMatrice(int *matrica, int *velicina)
         }
     }
     printf("Kolona je palindrom");
+
     return 0;
 }
 
-int odvojElemente(int *matrica, int *velicina)
+int razlikaDveKolone(int *matrica, int *velicina)
 {
     int i, brKolone1, brKolone2;
 
@@ -98,7 +99,6 @@ int odvojElemente(int *matrica, int *velicina)
 
     int j = 0;
 
-    // Dodavanje elemenata iz kolona1
     for (i = 0; i < *velicina; i++)
     {
         int duplikat = 0;
@@ -117,7 +117,6 @@ int odvojElemente(int *matrica, int *velicina)
         }
     }
 
-    // Dodavanje elemenata iz kolona2
     for (i = 0; i < *velicina; i++)
     {
         int duplikat = 0;
@@ -136,11 +135,42 @@ int odvojElemente(int *matrica, int *velicina)
         }
     }
 
-    // Ispis rezultata
     for (i = 0; i < j; i++)
     {
         printf("%d ", unijaKolona[i]);
     }
+    printf("\n");
+}
+
+int meni(int *matrica, int *velicina)
+{
+    int opcija;
+    do
+    {
+        printf("Opcija 1 - proverite da li je odredjena kolona matrice palindrom : \n");
+        printf("Opcija 2 - pronadjite razlike dve zeljene kolone od date matrice : \n");
+        printf("Opcija 0 - izadjite iz programa\n");
+        printf("Unesite zeljenu opciju:");
+        scanf("%d", &opcija);
+
+        switch (opcija)
+        {
+
+        case 1:
+            palindormMatrice(matrica, velicina);
+            break;
+        case 2:
+            razlikaDveKolone(matrica, velicina);
+            break;
+        case 0:
+            printf("Izasli ste iz programa");
+            break;
+
+        default:
+            printf("Uneti karakter nije validan");
+            break;
+        }
+    } while (opcija != 0);
 }
 
 int main()
@@ -152,6 +182,6 @@ int main()
     scanf("%d", &velicina);
     unosMatrice((int *)matrica, &velicina);
     prikazMatrice((int *)matrica, &velicina);
-    odvojElemente((int *)matrica, &velicina);
+    meni((int *)matrica, &velicina);
     return 0;
 }
