@@ -5,49 +5,54 @@
 
 int SIZE_MAX = 100;
 
-void unosNiza(int *niz, int *duzina)
+int unosMatrice(int *matrica, int *velicina)
 {
-    int i;
-    printf("Unesite clanove niza:\n");
-    for (i = 0; i < *duzina; i++)
+    int i, j;
+    for (i = 0; i < *velicina; i++)
     {
-        printf("niz[%d] = ", i);
-        scanf("%d", &niz[i]);
+        for (j = 0; j < *velicina; j++)
+        {
+            printf("Element [%d][%d] :", i, j);
+            scanf("%d", (matrica + i * (*velicina) + j));
+        }
     }
+    printf("\n");
 }
 
-void prikazNiza(int *niz, int *duzina)
+int prikazMatrice(int *matrica, int *velicina)
 {
-    int i;
-    printf("Uneti niz:");
-
-    for (i = 0; i < *duzina; i++)
+    int i, j;
+    printf("Matrica je: \n");
+    for (i = 0; i < *velicina; i++)
     {
-        printf(" %d ", niz[i]);
+        for (j = 0; j < *velicina; j++)
+        {
+            printf(" %d", *(matrica + i * (*velicina) + j));
+        }
+        printf("\n");
     }
 }
+// 150.Дата је улазна квадратна матрица целих бројева димензије 5 x 5. Написати функцију која
+// проверава да ли се сви елементи на споредној дијагонали матрице налазе и на главној
+// дијагонали матрице. На споредној и главној дијагонали елементи могу да се понављају
 
-// 68. Дат је низ целих бројева. Имплементирати потпрограм који у задатом низу целих бројева
-// убацује нови елемент на задату позицију.
-
-void funkcija(int *niz, int *duzina)
+int funkcija(int *matrica, int *velicina)
 {
-    int pozicija;
-    printf("Unesite poziciju u nizu na koju zelite umetnuti novi element: ");
-    scanf("%d", &pozicija);
+    int zbir = 0;
+    int broj;
 
-    int element;
-    printf("Unesite element koji zelite umetnuti u nizu: ");
-    scanf("%d", &element);
+    printf("Unesite broj za izracunavanje zbira cifara:\n ");
+    scanf("%d", &broj);
 
-    int noviNiz[SIZE_MAX];
-    int k = 0;
-
-    printf("Niz pomeren za n mesta u desno:\n");
-    for (int i = 0; i < *duzina; i++)
+    while (broj != 0)
     {
-        printf("%d ", noviNiz[i]);
+        zbir += broj % 10;
+        broj /= 10;
     }
+
+    printf("Zbir cifata broj je %d:\n", zbir);
+
+    return 0;
 }
 
 int main()

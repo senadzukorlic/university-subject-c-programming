@@ -129,3 +129,56 @@ void funkcija(int *niz, int *duzina)
         printf("%d ", noviNiz[i]);
     }
 }
+
+// 68. Дат је низ целих бројева. Имплементирати потпрограм који у задатом низу целих бројева
+// убацује нови елемент на задату позицију.
+void funkcija(int *niz, int *duzina)
+{
+    int pozicija;
+    printf("Unesite poziciju u nizu na koju zelite umetnuti novi element: ");
+    scanf("%d", &pozicija);
+
+    if (pozicija < 0 || pozicija > *duzina)
+    {
+        printf("Nevalidna pozicija!\n");
+        return;
+    }
+
+    int element;
+    printf("Unesite element koji zelite umetnuti u nizu: ");
+    scanf("%d", &element);
+
+    for (int i = *duzina; i > pozicija; i--)
+    {
+        niz[i] = niz[i - 1];
+    }
+
+    niz[pozicija] = element;
+
+    (*duzina)++;
+
+    printf("Niz sa dodatim elementom %d na poziciji %d:\n", element, pozicija);
+    for (int i = 0; i < *duzina; i++)
+    {
+        printf("%d ", niz[i]);
+    }
+}
+// 79. а) Имплементирати функцију која рачуна збир цифара неког задатог броја.
+int funkcija()
+{
+    int zbir = 0;
+    int broj;
+
+    printf("Unesite broj za izracunavanje zbira cifara:\n ");
+    scanf("%d", &broj);
+
+    while (broj != 0)
+    {
+        zbir += broj % 10;
+        broj /= 10;
+    }
+
+    printf("Zbir cifata broj je %d:\n", zbir);
+
+    return 0;
+}
