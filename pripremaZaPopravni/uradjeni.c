@@ -1,5 +1,17 @@
-#include <math.h>
-#include <stdio.h>
+// 12. Унети два броја а и n. Написати програм који рачуна степен an
+
+int stepenNaN(int a, int n)
+{
+
+    int suma = a;
+    int i = 1;
+    while (i < n)
+    {
+        suma *= a;
+        i++;
+    }
+    printf("Broj %d na %d iznosi: %d", a, n, suma);
+}
 
 // 2. Написати програм који рачуна и на стандардном излазу приказује површину круга
 // полупречника 5.
@@ -16,13 +28,4 @@ int povrsinaKruga(int pp)
     povrsina = pi * newPP;
 
     printf("Povrsina kruga je: %.2f", povrsina);
-}
-
-int main()
-{
-    int pp;
-    printf("Unesite duzinu poluprecnika: ");
-    scanf("%d", &pp);
-    povrsinaKruga(pp);
-    return 0;
 }
